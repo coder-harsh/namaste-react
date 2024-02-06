@@ -1,0 +1,54 @@
+igniting our app
+//is code in tut 1 was ready to push to production. No: 9:47
+//NPM Dont stands for Node Pckage manager. It has not an abbrevation or full form.
+//In react app there is NPM already configured in it. We dont need to configure it.
+//But here now we will configure it.
+//NPM manage packages in react. its a package manager.
+
+//npm is an standrad repository for all the packages.
+//when we create react app, it automatically has an npm inside it. We dont have to configure it.
+//Now see how to configure it.
+//npm init - initialise npm. we will don it instead.
+//npm init -y: it will skip lot of things
+//in test command write jest for now. we will use jest for testing
+
+//pacakage.json file is a configuration for our npm. all the configuration of our npm.
+//why we need pacakge.json file?
+/*
+sometines this packages are also known as dependencies.
+npm will take care of what will the version of that packages.
+//suppose if am using some other library or other package. what is the version of that package. npm will take care of it in pacakage.json.
+package.json is configuartion for it.
+now e can get package or dependencies frominto our project.
+now start installing our dependencies.
+//now will bundle the package. Bundlers are most important package in our app.
+
+have you heared webpack, parcel or vite? 
+these are bundlers which bundels our packages or app to ship it to production.
+
+
+when we create react app, then it uses webpack bundelers behind the scenes. uses webpack bundelers and bebel behind the scenes.
+
+We will be using parcel.
+
+For installing any pacakges/dependencies, we will have same command. npm install package-name
+
+but will use npm install -D parcel: -D is parameter
+
+there are 2 types of packages that we xcan install. 1 is dev dependencies and another is normal dependencies. 
+bunding done in dev phase, so we will use dev dependencies.
+
+
+now there will be devdependencies parcel in pacakage.json. 
+
+ "devDependencies": {
+    "parcel": "^2.11.0" 
+  }
+
+//^: kerret  we can also put tilde~ over here.
+diff bw ^ and ~: ^ means update it to minor version i.e latest updates. update dependencies to latest updates. ex: 2.11.7 etc. recommended to use latest version
+~: means update dependencies to major version. for example, 3.1.0, 4.1.0: not recommended as it has major changes abnd updates.
+
+
+what is package-lock.json: 
+*/
