@@ -35,7 +35,7 @@ For installing any pacakges/dependencies, we will have same command. npm install
 
 but will use npm install -D parcel: -D is parameter
 
-there are 2 types of packages that we xcan install. 1 is dev dependencies and another is normal dependencies. 
+there are 2 types of packages that we can install. 1 is dev dependencies and another is normal dependencies. 
 bunding done in dev phase, so we will use dev dependencies.
 
 
@@ -47,8 +47,36 @@ now there will be devdependencies parcel in pacakage.json.
 
 //^: kerret  we can also put tilde~ over here.
 diff bw ^ and ~: ^ means update it to minor version i.e latest updates. update dependencies to latest updates. ex: 2.11.7 etc. recommended to use latest version
-~: means update dependencies to major version. for example, 3.1.0, 4.1.0: not recommended as it has major changes abnd updates.
+~: means update dependencies to major version. for example, 3.1.0, 4.1.0: not recommended as it has major changes and updates.
 
 
-what is package-lock.json: 
+
+
+
+^: means install any version. if there is minor update, install that also.
+
+what is package-lock.json: package-lock.json keeps track of exact version 2.8.3 that is being installed.
+pacakge-lock.json locks the verion and keep record of it. i.e exact version of that package/dependecy which is installed.
+
+package.json can have a carrate or tiddle. package.json keeps a approx version of it.
+
+pacakage.lock.json has exact 2.8.3 version which is there.
+package.lock.json keeps track of the exact version of all the dependencies.
+
+intergraity: keeps sha2 version of all files and dependecy, module. sha2 for confirmation of file on lock and production to be same.
+
+pacakge.json: approx version, update to minor version also
+pacakage.lock.json: exact version
+
+transitent dependency: we only install parcel as dependecy. Parcel as a project has also it's dependency. Parcel takes help of bebel also.
+
+
+
+we don't need to put node modules on github. so we put this file path in gitignore file.
+
+
+
+
+
+
 */
