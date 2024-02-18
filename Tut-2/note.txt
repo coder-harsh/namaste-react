@@ -74,9 +74,10 @@ transitent dependency: we only install parcel as dependecy. Parcel as a project 
 
 we don't need to put node modules on github. so we put this file path in gitignore file.
 
+we have to push package.json and package.lock.json to github. As it stores version of dependecy.
 
-
-
+if we have package.json and pacakge.lock.json, we can recreate node_modules even if it is deleted.
+only i have to run npm install
 
 
 */
