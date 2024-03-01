@@ -165,6 +165,25 @@ it generates dev build. it puts up in dist folder.
 parcel, dist and node_modules are temp file, so we don't need to push on github.
 we will run npx pparcel index.html and these file will be generated automatically.
 
+now we built prod ready app.
+
+now we will will configure our app for specific browser using browserlist
+browserlist is a npm package. it needs some configuration.
+
+you have tell browser what all browser wil support you app.
+
+we have to configure it in package.json
+
+ "browserslist": [
+    "last 10 Chrome version",
+    "last 2 Firefox version"
+  ]
 
 
+  this means app migh not work in other version of browser but will work in this version of browser.
+  we can also configure coutry specific details like 5% in us
+  parcel takes care of it along with browserslist
+
+
+  now we have created our own react app.
 */
