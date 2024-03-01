@@ -77,7 +77,94 @@ we don't need to put node modules on github. so we put this file path in gitigno
 we have to push package.json and package.lock.json to github. As it stores version of dependecy.
 
 if we have package.json and pacakge.lock.json, we can recreate node_modules even if it is deleted.
-only i have to run npm install
+only i have to run npm install. It will again install node_modules.
+
+whatever we can regenerate, don't put it on git.
+
+
+^: minor update
+~: major update
+
+
+
+now ignite our app.
+npx parcel index.html: ignite the app
+
+npm 
+npx parcel something: means executing parcel now. it means executing package now.
+npm install means installing the package.
+
+
+when we do npx parcel index.html: index.html is basically the source.
+
+parcel goes to the source index.html and build a developement build for our app. It build a developement build for our app. it host the developement build to localhost 1234.
+
+
+
+now we don't need to use react with cdn.
+
+npm install react: install react. I didn't added -d as i need normal dependency.
+
+
+
+npm install react-dom: install react-dom.
+npm i react-dom: lot of people do. npm i is short form of npm install.
+
+now we have react and react-dom in our project. no need of cdn
+
+ctrl + c: close the server //if you delete node moule and execute parcel it will throw error. so for installing node_modules, you need to run npm install. For removing error. Just delete .parcel-cache and dist file
+npx parcel index.html: execute the html.
+
+now if we use react.createElement, then 1 error will come: Uncaught ReferenceError: React is not defined
+so we have installed react inside node, how we will use it inside our code
+we will do it using import keyword
+
+
+again we have errror after importing react and reactdom.
+//Browser scripts cannot have imports or exports.
+//it thinks that current script is normal js file and it should not have import and export
+we have to tell browser that it is not normal js file, it's a module: type="module"
+
+now error will gone and our react element will be rendered
+
+
+
+wheneveer we will change anything in any file or save the file, then parcel we reloade the browser.
+-feature of parcel
+-dev build
+-local server
+-MR - HOT Module Replacement - auto page reload. If we change naything in file then it automatically refreasing the page.
+-file watching algorithm: written in c++
+-caching things - faster build due to caching
+-image optimization
+-minify file in production
+-bundle file: parcel is a bundlers
+-compress file for production
+
+
+React is not only thing that is making your application faster
+parcel also take help of others. it is manager for other libruary.
+
+
+-consistent hashing
+-code spliting
+-diffrential bundling: support old browser. diffrent bundle for diff browser
+dignostic
+error handling
+host you app on https. ssl support
+treeshaking - remove unused code for you. suppose we have 100 function and will use 4 only then parcel willl remove extra code in bundling
+check from website
+diff build for dev and prod.
+
+
+for dev build: npx parcel build index.html: it will give error. bcs in pacakge.json, "main":"App.js"/"main": "index.js" is entry point but parcel, we defined index.html so remove this line.
+
+
+it generates dev build. it puts up in dist folder.
+
+parcel, dist and node_modules are temp file, so we don't need to push on github.
+we will run npx pparcel index.html and these file will be generated automatically.
+
 
 
 */
