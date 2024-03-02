@@ -16,3 +16,23 @@ but for build, it will not work
 npm parcel index.html: will not work. npx parcel index.html will work
 npx start will also not work. Only npm start will work
 
+//dom element are html element
+//React Element: it is an element equivalent to dom element
+
+react element is not an html element
+
+react element is an object at the end of the day
+when we render this element onto dom, it becomes an html element.
+
+// react element is an oobject
+when we render, then the powerful lib readtdom takes the object and convert it to html and push to browser.
+
+
+push means it will replace what ever inside root.
+
+
+
+React.createElement is not a good way. It is like html inside js
+but syntax is bad
+
+
