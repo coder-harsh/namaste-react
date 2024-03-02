@@ -35,4 +35,58 @@ push means it will replace what ever inside root.
 React.createElement is not a good way. It is like html inside js
 but syntax is bad
 
+so developers created jsx: js syntax to create react element eaisly
 
+jsx is not part of react
+we can write react without jsx also
+
+
+const jsxheading=<h1>Hello Using JSX🚀</h1>
+
+
+//dom element are html element
+//React Element: it is an element equivalent to dom element
+// react element is an oobject
+
+const jsxheading = <h1 id="heading">Hello Using JSX🚀</h1>//jsx //jsx is diff then html //this code is eq to react.createElement code //create react element using jsx
+
+//jsx is html like syntax //xml like syntax
+
+//jsx is react elelemnet? no it's a syntax
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxheading);
+console.log(jsxheading); //object same as react.createElement
+
+
+//now we will use jsx
+jsx is not pure javascript
+
+//any js code is understand by js engine
+js engine will not understand jsx
+js engine understand ecmascript
+
+
+//js engine not able to read jsx code. Then how it is printed?
+parcel doing it's job
+even before this code is goes to js enine, it is transpilled be4 it goes to js enine.
+js engine recive the code that browser can read
+jsx code is transpilleld before it goes to js engine
+
+transpilled: this code is coverted to the code that browser can understand
+
+transpilling is done by parcel;
+
+
+parcel doesnt do transpilling by itself
+it manages everything
+
+parcel using babel for transpilling
+
+//Babel is a JavaScript compiler.
+babael not created by facebook
+
+
+
+jsx code is transpiled to react.createElement and then it js object. then it is rendered as html element.
+jsx is coverted to react elelemnet
