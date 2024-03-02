@@ -1,0 +1,18 @@
+npx parcel index.html: means we are executing an npm pacakage parcel and source file is index.html
+the command is diff for prod build and dev build
+to make our life easier, we will write an script to run the project instead of the large command.
+we have to add script in pacakage.json
+if you go in company and dont know how to start project, then go to script in package.json
+
+
+
+now we will run the project using npm run start or npm start
+npm run build: this will build our project. This is how we build the project for production
+
+npm run start = npm start
+but for build, it will not work
+
+
+npm parcel index.html: will not work. npx parcel index.html will work
+npx start will also not work. Only npm start will work
+
