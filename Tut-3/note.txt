@@ -90,3 +90,45 @@ babael not created by facebook
 
 jsx code is transpiled to react.createElement and then it js object. then it is rendered as html element.
 jsx is coverted to react elelemnet
+
+JSX=>React.createElement=>React element=>JS Object=>transpiled(Babel)=>HTML Element(Rendering)
+
+babel is converting jsx code to react.createElement
+
+
+jsx is behind the scene react.createElement
+
+babel is a open source js compiler
+babel's job is not just to create jsx to react element, it does lot of things
+babel is js compiler, transpiller
+old browser dont understand js es6 code, babel can change es6 code to older one.
+babel is node lib, npm lib
+parcel is manager of babel.
+
+
+jsx is mix of js and html not exact html
+
+
+when we need to give attribute in jsx, we give it in camelcase. className
+
+//JSX stands for JavaScript XML
+
+
+tabIndex attribute in html: set priority oder of html leemnt when tab button shift focus
+if the jsx in single line it is valid jsx: const jsxheading = <h1 id="heading" className="jsxheading">Hello Using JSX🚀</h1>
+
+but if jsx is in multiple line, you have to wrap it inside parenthesis. i.e () round bracket
+
+-why we wrap up, bcs babel need to understand, where jsx started and where jsx ended. if its sinle line, no need
+
+const jsxheading = (<h1 id="heading" className="jsxheading">Hello Using JSX🚀</h1>): valid and even without (), it is valid as it is single line jsx
+
+if we write jsx in multiple lines, then () is mandatory
+
+const jsxheading = (<h1 id="heading" className="jsxheading">
+Hello Using JSX🚀
+</h1>):
+
+jsx:babel transpiled it to react.createElement and react.createElement is executed to react element and then it is rendred as html element
+
+in the variable jsxheading, there is an object

@@ -16,16 +16,25 @@ root.render(heading);
 //dom element are html element
 //React Element: it is an element equivalent to dom element
 // react element is an oobject
-const jsxheading = <h1 id="heading">Hello Using JSX🚀</h1>//jsx //jsx is diff then html //this code is eq to react.createElement code //create react element using jsx
+const jsxheading = <h1 id="heading" className="jsxheading">Hello Using JSX🚀</h1>//jsx //jsx is diff then html //this code is eq to react.createElement code //create react element using jsx
 
 //jsx is html like syntax //xml like syntax
 
 //jsx is react elelemnet? no it's a syntax
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxheading);
+// root.render(jsxheading);
 console.log(jsxheading); //object same as react.createElement
 
 
 //now we will use jsx
 
+// const jsxheading2 = (<h1 id="heading" className="jsxheading">Hello Using JSX🚀</h1>): valid
+
+const jsxheading2 = (
+    <h1 id="head" className="jsxheading">
+        Hello Using JSX🚀 multiple line
+    </h1>
+);
+
+root.render(jsxheading2);
