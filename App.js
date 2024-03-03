@@ -12,7 +12,7 @@ root.render(heading); //this heading will overwrite inner h1
 const heading = React.createElement("h2", { id: "heading", className: "h2" }, "H2 heading"); //create react element using core react
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(heading);
-*/
+
 //dom element are html element
 //React Element: it is an element equivalent to dom element
 // react element is an oobject
@@ -38,3 +38,19 @@ const jsxheading2 = (
 );
 
 root.render(jsxheading2);
+*/
+//react component
+
+//react component is normal js function which return some jsx element
+
+// function: ()=>
+
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(HeadingComponent);
+

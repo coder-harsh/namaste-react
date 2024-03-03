@@ -132,3 +132,68 @@ Hello Using JSX🚀
 jsx:babel transpiled it to react.createElement and react.createElement is executed to react element and then it is rendred as html element
 
 in the variable jsxheading, there is an object
+
+react component
+everything in react is a component
+
+-class based component - old way
+-functional component - new way
+
+functional component is a normal js function
+always create a component with capital letter else it will give an error.
+
+function: ()=>
+
+const HeadingComponent=function HeadingComponent{
+    
+}
+const HeadingComponent=()=>{
+
+}
+
+a react functional component is a function that return some piece of jsx element
+jsx is a react element
+functional component is a js function that return react element
+
+
+a function that is returning a react element, is a functional component
+
+const fn=()=>true;
+
+const fn2=()=>{
+    return true;
+}
+const fn3=()=>{true};
+fn me agar ek line ka statement rahe to no need of {}
+
+these 2 are same
+
+the cool dev write like this
+
+const HeadingComponent=()=><h1 className="heading">Heading by cool devs</h1> //shotcut
+
+const HeadingComponent=()=>(
+    <h1>Heading by cool devs</h1> //for multiple line //no need of return. will give error in () this case
+);
+const HeadingComponent=()=>{
+    return <h1>Heading by cool devs</h1>
+}
+
+fun componenet can return jsx code or a react element
+
+fun component/jsx can be nested
+ const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+    </div>
+};
+
+
+const HeadingComponent = () => (
+  <div>
+        <h1 className="heading">Hello from fun component</h1>
+    </div>
+);
+to make a react component a functional component
+-change variable name to capital
+add arrow fn or fn
