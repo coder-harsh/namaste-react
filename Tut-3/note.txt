@@ -197,3 +197,8 @@ const HeadingComponent = () => (
 to make a react component a functional component
 -change variable name to capital
 add arrow fn or fn
+
+
+we can not render react fn componenets unlike react elelemnet
+root.render(HeadingComponent);
+we can render it like: root.render(<HeadingComponent/>); or root.render(<HeadingComponent></HeadingComponent>);
