@@ -202,3 +202,8 @@ add arrow fn or fn
 we can not render react fn componenets unlike react elelemnet
 root.render(HeadingComponent);
 we can render it like: root.render(<HeadingComponent/>); or root.render(<HeadingComponent></HeadingComponent>);
+
+this is the syntax which babel understands.
+
+if we have 2 components and we want to render one component inside another component, we can do it
+component composition: nesting one component inside another component.

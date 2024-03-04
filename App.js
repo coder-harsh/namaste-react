@@ -38,7 +38,7 @@ const jsxheading2 = (
 );
 
 root.render(jsxheading2);
-*/
+
 //react component
 
 //react component is normal js function which return some jsx element
@@ -53,4 +53,19 @@ const HeadingComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component
+*/
+const Title = () => (
+    <p className="tittlep">
+        Hi from title
+    </p>
+);
 
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+        <Title />
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />); //Hello from fun component
