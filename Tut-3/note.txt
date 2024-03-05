@@ -219,7 +219,7 @@ const Title=function(){
 now you will need to return it
 its not mandatory to use arrow fn.
 
-inside jsx, if we will putcurly braces, we can pur any js expression/variable inside it.
+inside jsx, if we will put curly braces, we can pur any js expression/variable inside it.
 var r=30;
 const HeadingComponent = () => {
     return <div>
@@ -229,9 +229,22 @@ const HeadingComponent = () => {
     }
     {r} //variable
         <h1 className="heading">Hello from fun component</h1>
-        <Title />
+        <Title /> //nested component
     </div>
 };
 
 how to put react element inside fn component
 as the react element is normal variable so we can put a react element in jsx/fn component same like normal js variable {title}
+const title = (
+    <p>Hi from react element</p>
+)
+
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+        <h1>{title}</h1>
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />); //Hello from fun component //Hi from react element

@@ -82,13 +82,16 @@ const HeadingComponent = () => {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component
 */
+const title = (
+    <p>Hi from react element</p>
+)
 
 const HeadingComponent = () => {
     return <div>
         <h1 className="heading">Hello from fun component</h1>
-        <h1>{digit}</h1>
+        <h1>{title}</h1>
     </div>
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeadingComponent />); //Hello from fun component
+root.render(<HeadingComponent />); //Hello from fun component //Hi from react element
