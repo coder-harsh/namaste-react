@@ -207,3 +207,31 @@ this is the syntax which babel understands.
 
 if we have 2 components and we want to render one component inside another component, we can do it
 component composition: nesting one component inside another component.
+
+we can also write normal js fn instead of arrow fn.
+
+const Title=function(){
+    return(
+        <p className="tit">Hi from normal fn</p>
+    )
+}
+
+now you will need to return it
+its not mandatory to use arrow fn.
+
+inside jsx, if we will putcurly braces, we can pur any js expression/variable inside it.
+var r=30;
+const HeadingComponent = () => {
+    return <div>
+    {
+        //any js expression or variable even console.log
+        r //"30" in inspect element //30 on html page
+    }
+    {r} //variable
+        <h1 className="heading">Hello from fun component</h1>
+        <Title />
+    </div>
+};
+
+how to put react element inside fn component
+as the react element is normal variable so we can put a react element in jsx/fn component same like normal js variable {title}

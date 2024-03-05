@@ -53,7 +53,7 @@ const HeadingComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component
-*/
+
 const Title = () => (
     <p className="tittlep">
         Hi from title
@@ -64,6 +64,29 @@ const HeadingComponent = () => {
     return <div>
         <h1 className="heading">Hello from fun component</h1>
         <Title />
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />); //Hello from fun component
+
+const digit = 400;
+
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+        <h1>{digit}</h1>
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />); //Hello from fun component
+*/
+
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+        <h1>{digit}</h1>
     </div>
 };
 
