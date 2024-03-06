@@ -81,7 +81,7 @@ const HeadingComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component
-*/
+
 const title = (
     <p>Hi from react element</p>
 )
@@ -95,3 +95,51 @@ const HeadingComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component //Hi from react element
+
+
+//put react element inside react element
+
+const elm = <span>Hi from react elelement span</span>
+
+const title = (
+    <p>
+        Hi from react element
+        <br />
+        {elm}
+    </p>
+    //{elm}: we can not write like this as we need to wrap up the element in container
+);
+
+const HeadingComponent = () => {
+    return <div>
+        <h1 className="heading">Hello from fun component</h1>
+        <h1>{title}</h1>
+    </div>
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<HeadingComponent />);
+
+// we can also put react component inside react element also
+
+
+const HeadingComponent = () => {  //yaha {} bracket rahega to return karna padega. agar () rahega to return nhi karna padega
+    return <div>
+        <h1 className="heading">Hello from multi line fun component</h1>
+    </div>
+};
+const HeadinComponent = () => <div><h1 className="heading">Hello from single line fun component</h1></div>;  //even {} rahega but sinle line m rahega to no need of retunn
+const title = (
+    <p>
+        Hi from react element
+        <br />
+        <HeadingComponent />
+        <HeadinComponent />
+    </p>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(title);
+
+//if we will put creact component in react element and react element in react component, browser will go in infinite loop
+*/

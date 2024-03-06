@@ -248,3 +248,42 @@ const HeadingComponent = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />); //Hello from fun component //Hi from react element
+
+how to put react element inside react element
+same way like react element in react component
+
+const elm=<span>Hi from react elelement</span>
+const title=(
+    <h1>
+    Hi from react element
+     {elm}
+    </h1>
+     //{elm}: we cannot write like this as we need to wrap element in a container
+);
+
+
+we can also put react component inside react element also
+const HeadingComponent = () => (
+    <div>
+        <h1 className="heading">Hello from fun component</h1>
+    </div>
+);
+
+const title = (
+    <p>
+        Hi from react element
+        <br />
+        <HeadingComponent />
+    </p>
+);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(title);
+
+
+//if we will put creact component in react element and react element in react component, browser will go in infinite loop
+
+
+//we can put any js code in {}
+
+
