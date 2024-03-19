@@ -44,6 +44,7 @@ root.render(jsxheading2);
 //react component is normal js function which return some jsx element
 
 // function: ()=>
+//function(): ()=>
 
 const HeadingComponent = () => {
     return <div>
@@ -143,3 +144,47 @@ root.render(title);
 
 //if we will put creact component in react element and react element in react component, browser will go in infinite loop
 */
+
+//we can put any js code in {}
+const data = 1000;
+//const ndata = api.getData(); //data comming from this api. So it will go and run inside {}
+//what if bad api sends malicious data? It can read cokokies and other data by running javascript inside {}. We are injecting data intop {}
+
+//This type of attack is known as cross side scripting attack
+
+
+//by running js code in your browser, hacker can acess cookiess, laptop data, session data etc.
+
+
+///but jsx takes care of this injection attack
+//even if the api will send some malicious data, jsx will escape it. It is sanetising the data.
+//whatever js will be in {}, bowser not blindly run it. It will first sanetise the data.
+//jsx revenets cross side scripting
+
+
+const title = (
+    <p>
+        Hi from react element
+        <br />
+    </p>
+);
+const Name = () => {
+    return <h3>Hello from name component</h3>   //return (<h3>Hello from name component</h3>);
+}
+const HeadingComponent = () => {
+    return <div id="header">
+        {title}
+        {data}
+        <Name /> {/*both way is correct. We can write it any no of times*/}
+        <Name></Name>
+        <name></name> {/*componenet ka first letter capital se start hota hain. small m ye work nhi karega*/}
+        {/* {title()}  */}
+        {/*Will not work. title is not a function. React element is an object at the end of day. */}
+        {Name()}  {/*will owk as fun component is a fn at the end of the day. */}
+        <h1>Hello from fun component</h1>
+        {12 * 34}
+    </div>
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(title);
+root.render(<HeadingComponent />); 

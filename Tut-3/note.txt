@@ -286,4 +286,33 @@ root.render(title);
 
 //we can put any js code in {}
 
+const title = (
+    <p>
+        Hi from react element
+        <br />
+    </p>
+);
+
+const data = 1000;
+
+const Name = () => {
+    return <h3>Hello from name component</h3>   //return (<h3>Hello from name component</h3>);
+}
+const HeadingComponent = () => {
+    return <div id="header">
+        {title}
+        {data}
+        <Name /> {/*both way is correct. We can write it any no of times*/}
+        <Name></Name>
+        <name></name> {/*componenet ka first letter capital se start hota hain. small m ye work nhi karega*/}
+        these 3 things are same things
+        <Title/>
+        <Title></Title>
+        {Title()}  //run js code inside {}
+        <h1>Hello from fun component</h1>
+    </div>
+}
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(title);
+root.render(<HeadingComponent />); 
 
