@@ -115,6 +115,12 @@ now we have react and react-dom in our project. no need of cdn
 ctrl + c: close the server //if you delete node moule and execute parcel it will throw error. so for installing node_modules, you need to run npm install. For removing error. Just delete .parcel-cache and dist file
 npx parcel index.html: execute the html.
 
+if .parcel-cache and ist is deleted: just run npx parcel index.html and it will again be created.
+
+
+npx parcel build index.html: will create prod build
+npx parcel index.html: will create dev build
+
 now if we use react.createElement, then 1 error will come: Uncaught ReferenceError: React is not defined
 so we have installed react inside node, how we will use it inside our code
 we will do it using import keyword
